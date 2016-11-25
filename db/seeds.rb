@@ -9,5 +9,12 @@ day1 = Day.new({
   })
 day1.save
 
+burger1 = Burger.new({
+  "name" => "Cheese Burger",
+  "price" => 12.99
+  })
+
+burger1.save
+
 binding.pry
 nil

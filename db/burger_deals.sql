@@ -7,7 +7,7 @@ CREATE TABLE burgers
 (
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
-  price money
+  price DECIMAL
 );
 
 CREATE TABLE days
