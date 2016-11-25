@@ -16,5 +16,12 @@ burger1 = Burger.new({
 
 burger1.save
 
+deal1 = Deal.new({
+  "name" => "Burger and a pint £7.99",
+  "day_id" => day1.id
+  })
+
+deal1.save
+
 binding.pry
 nil

@@ -19,8 +19,7 @@ CREATE TABLE days
 CREATE TABLE deals
 (
   id SERIAL8 primary key,
-  label VARCHAR(255) not null,
-  burger_id INT8 references burgers(id),
+  name VARCHAR(255) not null,
   day_id INT8 references days(id)
 );
 
