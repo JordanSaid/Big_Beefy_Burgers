@@ -2,16 +2,17 @@ require_relative( '../db/sql_runner' )
 
 class Deal
 
-  attr_reader( :name, :day_id, :id )
+  attr_reader( :name, :day_id, :restaurant_id, :id )
 
   def initialize( options )
     @id = nil || options['id'].to_i
     @name = options['name']
     @day_id = options['day_id']
+    @restaurant_id = options['restaurant_id']
   end
 
   def save()
-    sql = "INSERT INTO deals (name, day_id) VALUES ('#{ @name }',#{ @day_id }) RETURNING *"
+    sql = "INSERT INTO deals (name, day_id, restaurant_id) VALUES ('#{ @name }',#{ @day_id }, #{ @restaurant_id }) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end

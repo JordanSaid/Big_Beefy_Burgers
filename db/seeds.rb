@@ -9,19 +9,29 @@ day1 = Day.new({
   })
 day1.save
 
+restaurant1 = Restaurant.new({
+  "name" => "Chanter"
+  })
+
+restaurant1.save
+
 burger1 = Burger.new({
   "name" => "Cheese Burger",
-  "price" => 12.99
+  "price" => 12.99, 
+  "restaurant_id" => restaurant1.id
   })
 
 burger1.save
 
 deal1 = Deal.new({
   "name" => "Burger and a pint £7.99",
-  "day_id" => day1.id
+  "day_id" => day1.id,
+  "restaurant_id" => restaurant1.id
   })
 
 deal1.save
+
+
 
 binding.pry
 nil
