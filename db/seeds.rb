@@ -1,7 +1,7 @@
 require_relative( '../models/day.rb' )
 require_relative( '../models/deal.rb' )
 require_relative( '../models/restaurant.rb' )
-require_relative( '../models/join.rb' )
+require_relative( '../models/restaurant_deal.rb' )
 require('pry-byebug')
 
 day1 = Day.new({
@@ -25,12 +25,12 @@ deal1 = Deal.new({
 
 deal1.save
 
-join1 = Join.new({
+restaurant_deal1 = RestaurantDeal.new({
   "restaurant_id" => restaurant1.id,
   "deal_id" => deal1.id
   })
 
-join1.save
+restaurant_deal1.save
 
 binding.pry
 nil

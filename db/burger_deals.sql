@@ -1,5 +1,6 @@
-DROP TABLE joins;
+DROP TABLE restaurant_deals;
 DROP TABLE deals;
+-- DROP TABLE burgers;
 DROP TABLE days;
 DROP TABLE restaurants;
 
@@ -14,6 +15,13 @@ CREATE TABLE restaurants(
   menu VARCHAR(255) not null
 );
 
+-- CREATE TABLE burgers(
+--   id SERIAL8 primary key,
+--   name VARCHAR(255) not null,
+--   description VARCHAR(255) not null,
+--   price MONEY
+-- )
+
 CREATE TABLE deals(
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
@@ -22,7 +30,7 @@ CREATE TABLE deals(
   restaurant_id INT8 references restaurants(id)
 );
 
-CREATE TABLE joins(
+CREATE TABLE restaurant_deals(
   id SERIAL8 primary key,
   restaurant_id INT8 references restaurants(id),
   deal_id INT8 references deals(id)
