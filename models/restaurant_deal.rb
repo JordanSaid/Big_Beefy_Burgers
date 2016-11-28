@@ -2,26 +2,26 @@ require_relative( '../db/sql_runner' )
 
 class RestaurantDeal
 
-  attr_reader( :id, :restaurant_id, :deal_id)
+  attr_reader( :id, :restaurant_id, :burger_id)
 
   def initialize( options )
     @id = nil || options['id'].to_i
-    @restaurant_id = options['restaurant_id']
     @deal_id = options['deal_id']
+    @burger_id = options['deal_id']
   end
 
   def save()
     sql = "INSERT INTO restaurant_deals (
-      restaurant_id, deal_id) VALUES ('#{ @restaurant_id }', '#{ @deal_id}') RETURNING *"
+      deal_id, burger_id) VALUES ('#{ @deal_id}', '#{ @burger_id}') RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end
 
-  def restaurant
-    sql = "SELECT * FROM restaurants r INNER JOIN restaurant_deals rd ON rd.restaurant_id = r.id WHERE r.id = #{@restaurant_id}"
-    results = SqlRunner.run( sql )
-    return Restaurant.new( results.first )
-  end
+  # def restaurant
+  #   sql = "SELECT * FROM restaurants r INNER JOIN restaurant_deals rd ON rd.restaurant_id = r.id WHERE r.id = #{@restaurant_id}"
+  #   results = SqlRunner.run( sql )
+  #   return Restaurant.new( results.first )
+  # end
 
   def deal
     sql = "SELECT * FROM deals d INNER JOIN restaurant_deals rd ON rd.deal_id = d.id WHERE d.id = #{@deal_id}"
@@ -29,10 +29,13 @@ class RestaurantDeal
     return Deal.new( results.first )
   end
 
-  def self.all()
-    sql = "SELECT * FROM restaurant_deals"
+  def burger
+    sql = "SELECT * FROM burgers b INNER JOIN restaurant_deals rd ON rd.burger_id = b.id WHERE b.id = #{@burger_id}"
     results = SqlRunner.run( sql )
-    return results.map { |hash| restaurant_deal.new( hash ) }
+    return Deal.new( results.first )
+  end
+
+  def self.all()
   end
 
   def self.delete_all

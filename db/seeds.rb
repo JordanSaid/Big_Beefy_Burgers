@@ -1,5 +1,6 @@
 require_relative( '../models/day.rb' )
 require_relative( '../models/deal.rb' )
+require_relative( '../models/burger.rb' )
 require_relative( '../models/restaurant.rb' )
 require_relative( '../models/restaurant_deal.rb' )
 require('pry-byebug')
@@ -16,6 +17,13 @@ restaurant1 = Restaurant.new({
 
 restaurant1.save
 
+burger1 = Burger.new({
+  "name" => "Cheeseburger",
+  "restaurant_id" => restaurant1.id
+  })
+
+burger1.save
+
 deal1 = Deal.new({
   "name" => "Burger and a pint £7.99",
   "description" => "Applies to all burgers and selected drinks",
@@ -26,7 +34,7 @@ deal1 = Deal.new({
 deal1.save
 
 restaurant_deal1 = RestaurantDeal.new({
-  "restaurant_id" => restaurant1.id,
+  "burger_id" => burger1.id,
   "deal_id" => deal1.id
   })
 
