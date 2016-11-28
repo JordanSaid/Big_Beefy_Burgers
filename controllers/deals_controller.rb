@@ -13,6 +13,8 @@ get '/deals' do
 end
 
 get '/deals/new' do
+  @restaurants = Restaurant.all
+  @days = Day.all
   @deals = Deal.all
   erb(:"deals/new")
 end

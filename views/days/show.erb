@@ -1,6 +1,5 @@
-<h1>Days</h1>
+<h1><%= @day.name() %></h1>
   <div>
-  <p><%= @day.name() %></p>
   <% for deal in @deals %>
   <% if (deal.day_id == @day.id) %>
   <p> Deal: <%= deal.name()%>

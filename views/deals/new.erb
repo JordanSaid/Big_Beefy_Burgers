@@ -1,0 +1,47 @@
+<h1>Add New deal</h1>
+
+<form action="/deals" method="post">
+  <p>
+    <label>
+      Name:
+      <input type="text" name="name"/>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Restaurant:
+      <select name="restaurant_id">
+
+        <% for restaurant in @restaurants %>
+        <option value="<%= restaurant.id %>"><%= restaurant.name %></option>
+        <% end %>
+
+
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Day:
+      <select name="day_id">
+
+        <% for day in @days %>
+        <option value="<%= day.id %>"><%= day.name %></option>
+        <% end %>
+
+
+      </select>
+    </label>
+  </p>
+
+  <p>
+      Description:</p>
+      <p>
+      <textarea rows="4" cols="50" name="description"/>Please write a description of the deal and what's included. 
+      </textarea>
+  </p>
+
+  <input type="submit" value="Add Deal" />
+</form>
