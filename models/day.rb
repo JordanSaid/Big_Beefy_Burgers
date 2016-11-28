@@ -27,6 +27,12 @@ class Day
     return Day.new( results.first )
   end
 
+  def self.find_name( name )
+    sql = "SELECT * FROM days WHERE name='#{name}'"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Day.new( hash ) }
+  end
+
   def self.delete_all
     sql = "DELETE FROM days"
     SqlRunner.run( sql )

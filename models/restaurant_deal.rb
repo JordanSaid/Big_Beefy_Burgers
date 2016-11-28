@@ -43,7 +43,7 @@ class RestaurantDeal
   end
 
   def self.destroy_by_restaurant(restaurant_id)
-    sql = "DELETE FROM restaurant_deals where id = #{id}"
+    sql = "DELETE FROM restaurant_deals where restaurant_id = #{id}"
     SqlRunner.run( sql )
   end
 

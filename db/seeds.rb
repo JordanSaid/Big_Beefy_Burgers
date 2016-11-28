@@ -5,10 +5,13 @@ require_relative( '../models/restaurant.rb' )
 require_relative( '../models/restaurant_deal.rb' )
 require('pry-byebug')
 
-day1 = Day.new({
-  "name" => "Monday"
-  })
-day1.save
+day1 = Day.find(1)
+day2 = Day.find(2)
+day3 = Day.find(3)
+day4 = Day.find(4)
+day5 = Day.find(5)
+day6 = Day.find(6)
+day7 = Day.find(7)
 
 restaurant1 = Restaurant.new({
   "name" => "Chanter",
