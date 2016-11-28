@@ -50,6 +50,25 @@ deal1 = Deal.new({
 
 deal1.save
 
+deal2 = Deal.new({
+  "name" => "Cheeseburger and a pint £7.99",
+  "description" => "Applies to all burgers and selected drinks",
+  "day_id" => day1.id,
+  "restaurant_id" => restaurant1.id
+  })
+
+deal2.save
+
+deal3 = Deal.new({
+  "name" => "Veggie Burger and a pint £7.99",
+  "description" => "Applies to all burgers and selected drinks",
+  "day_id" => day1.id,
+  "restaurant_id" => restaurant2.id
+  })
+
+deal3.save
+
+
 restaurant_deal1 = RestaurantDeal.new({
   "burger_id" => burger1.id,
   "deal_id" => deal1.id

@@ -24,6 +24,12 @@ class Deal
     return results.map { |hash| Deal.new( hash ) }
   end
 
+  def self.find( id )
+    sql = "SELECT * FROM deals WHERE id = #{id}"
+    results = SqlRunner.run( sql )
+    return Deal.new( results.first )
+  end
+
   def day()
       sql = "SELECT * FROM days WHERE id = #{@day_id};"
       day = SqlRunner.run( sql )
