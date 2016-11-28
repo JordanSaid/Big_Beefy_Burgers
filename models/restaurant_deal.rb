@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class RestaurantDeal
 
-  attr_reader( :id, :restaurant_id, :burger_id)
+  attr_reader( :id, :deal_id, :burger_id)
 
   def initialize( options )
     @id = nil || options['id'].to_i
@@ -38,6 +38,11 @@ class RestaurantDeal
   end
 
   def self.destroy(id)
+    sql = "DELETE FROM restaurant_deals where id = #{id}"
+    SqlRunner.run( sql )
+  end
+
+  def self.destroy_by_restaurant(restaurant_id)
     sql = "DELETE FROM restaurant_deals where id = #{id}"
     SqlRunner.run( sql )
   end

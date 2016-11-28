@@ -1,0 +1,23 @@
+<h1>Deals</h1>
+
+<p>
+  <a href="/deals/new">Add a deal</a>
+</p>
+
+<ul>
+  <% for deal in @deals %>
+  <li>
+  <p><%= deal.name %> </p>
+  <p><%= deal.description %></p>
+  <p><%= deal.day.name %></p>
+  <p><a href="<%= deal.day.name %>"></p>
+  <p><%= deal.restaurant.name %></p>
+  <p><a href="<%= deal.restaurant.name %>"></p>
+    <p>
+      <form action="/deals/<%= deal.id %>/delete" method="POST">
+        <input type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>

@@ -17,12 +17,26 @@ restaurant1 = Restaurant.new({
 
 restaurant1.save
 
+restaurant2 = Restaurant.new({
+  "name" => "Burger Meats Bun",
+  "menu" => "https://static1.squarespace.com/static/5540c310e4b089664a9b9d33/t/557ef72ae4b0db2f0d136b7d/1434384170070/BMB-Main-Menu.pdf"
+  })
+
+restaurant2.save
+
 burger1 = Burger.new({
   "name" => "Cheeseburger",
   "restaurant_id" => restaurant1.id
   })
 
 burger1.save
+
+burger2 = Burger.new({
+  "name" => "Beefburger",
+  "restaurant_id" => restaurant1.id
+  })
+
+burger2.save
 
 deal1 = Deal.new({
   "name" => "Burger and a pint £7.99",

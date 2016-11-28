@@ -16,6 +16,12 @@ class Burger
     @id = results.first()['id'].to_i
   end
 
+  def restaurant()
+      sql = "SELECT * FROM restaurants WHERE id = #{@restaurant_id};"
+      restaurant = SqlRunner.run( sql )
+      return Restaurant.new(restaurant[0])
+  end
+
   def self.all()
     sql = "SELECT * FROM burgers"
     results = SqlRunner.run( sql )
@@ -30,6 +36,16 @@ class Burger
 
   def self.delete_all
     sql = "DELETE FROM burgers"
+    SqlRunner.run( sql )
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM burgers where id = #{id}"
+    SqlRunner.run( sql )
+  end
+
+  def self.destroy_by_restaurant(restaurant_id)
+    sql = "DELETE FROM burgers where restaurant_id = #{restaurant_id}"
     SqlRunner.run( sql )
   end
 

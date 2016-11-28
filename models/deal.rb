@@ -30,6 +30,12 @@ class Deal
       return Day.new(day[0])
   end
 
+  def restaurant()
+      sql = "SELECT * FROM restaurants WHERE id = #{@restaurant_id};"
+      restaurant = SqlRunner.run( sql )
+      return Restaurant.new(restaurant[0])
+  end
+
   def self.delete_all
     sql = "DELETE FROM deals"
     SqlRunner.run( sql )

@@ -5,7 +5,7 @@ require_relative( '../models/restaurant.rb' )
 require_relative( '../models/burger.rb' )
 require_relative( '../models/day.rb' )
 require_relative( '../models/deal.rb' )
-require_relative( '../models/burger_deal.rb')
+require_relative( '../models/restaurant_deal.rb')
 
 get '/restaurants' do
   @restaurants = Restaurant.all
@@ -21,4 +21,14 @@ post '/restaurants' do
   restaurant = Restaurant.new(params)
   restaurant.save
   redirect to("/restaurants")
+end
+
+get '/restaurants/:id' do
+  @restaurant = Restaurant.find( params[:id] )
+  erb(:"restaurants/show")
+end
+
+post '/restaurants/:id/delete' do
+  Restaurant.destroy( params[:id])
+  redirect to("/restaurants") 
 end
