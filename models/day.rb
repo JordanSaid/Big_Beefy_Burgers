@@ -22,7 +22,7 @@ class Day
   end
 
   def self.find( id )
-    sql = "SELECT * FROM days WHERE id=#{id}"
+    sql = "SELECT * FROM days WHERE id = #{id}"
     results = SqlRunner.run( sql )
     return Day.new( results.first )
   end

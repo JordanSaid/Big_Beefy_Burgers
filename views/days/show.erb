@@ -1,11 +1,11 @@
 <h1>Days</h1>
-<% for day in @days %>
   <div>
-  <p>Day: <%= day.name() %></p>
-  <% for deal in @deals %>
-  <!-- <p>Deal: <%<%= deal.name %>if deal.day_id = day_id%></p> -->
-
- 
+  <p><%= @day.name() %></p>
+  <% for deal in @deals %>    
+ <% if deal.day_id == @day.id %>
+  <p>Deal: <%= deal.name() %></p>
+  <% end %>
+  <% end %>
   </div>
   <hr/>
-<% end %>
+   

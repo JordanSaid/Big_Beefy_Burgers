@@ -7,8 +7,8 @@ get '/days' do
   erb ( :"days/index" )
 end
 
-get '/days/:name' do
+get '/days/:id' do
   @deals = Deal.all
-  @day = Day.find_name( params[:"name"] )
+  @day = Day.find( params[:id] )
   erb(:"days/show")
 end
