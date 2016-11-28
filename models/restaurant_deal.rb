@@ -17,12 +17,6 @@ class RestaurantDeal
     @id = results.first()['id'].to_i
   end
 
-  # def restaurant
-  #   sql = "SELECT * FROM restaurants r INNER JOIN restaurant_deals rd ON rd.restaurant_id = r.id WHERE r.id = #{@restaurant_id}"
-  #   results = SqlRunner.run( sql )
-  #   return Restaurant.new( results.first )
-  # end
-
   def deal
     sql = "SELECT * FROM deals d INNER JOIN restaurant_deals rd ON rd.deal_id = d.id WHERE d.id = #{@deal_id}"
     results = SqlRunner.run( sql )
