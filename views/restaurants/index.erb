@@ -1,0 +1,19 @@
+<h1>Restaurants</h1>
+
+<p>
+  <a href="/restaurants/new">Add a restaurant</a>
+</p>
+
+<ul>
+  <% for restaurant in @restaurants %>
+  <li>
+  <p><%= restaurant.name %> </p>
+  <p><a href="<%= restaurant.menu %>">Menu Link</a></p>
+    <p>
+      <form action="/restaurants/<%= restaurant.id %>/delete" method="POST">
+        <input type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>
