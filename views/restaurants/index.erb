@@ -14,7 +14,13 @@
       <form action="/restaurants/<%= restaurant.id %>/delete" method="POST">
         <input type="submit" value="delete" />
       </form>
+      <% for deal in @deals%>
+      <% if (deal.restaurant_id == restaurant.id) %>
+      <%end%>
+      <%end%>
+      <p> Deal Day: <%= deal.day.name()%></p>
+      <%end%>
     </p>
   </li>
-  <% end %>
+  
 </ul>

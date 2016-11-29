@@ -7,7 +7,7 @@ class Burger
   def initialize( options )
     @id = nil || options['id'].to_i
     @name = options['name']
-    @restaurant_id = options['restaurant_id']
+    @restaurant_id = options['restaurant_id'].to_i
   end
 
   def save()

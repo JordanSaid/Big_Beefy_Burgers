@@ -1,0 +1,11 @@
+<div>
+<% for restaurant_deal in @restaurant_deals %> 
+<% if (restaurant_deal.burger_id == restaurant_deal.deal_id) && (restaurant_deal.burger.restaurant_id == restaurant_deal.deal.restaurant_id) %>
+<p> Burger: <%= restaurant_deal.burger.name()%> 
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<%end%>
+<%end%>

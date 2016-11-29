@@ -6,8 +6,8 @@ class RestaurantDeal
 
   def initialize( options )
     @id = nil || options['id'].to_i
-    @deal_id = options['deal_id']
-    @burger_id = options['deal_id']
+    @deal_id = options['deal_id'].to_i
+    @burger_id = options['deal_id'].to_i
   end
 
   def save()
@@ -30,6 +30,9 @@ class RestaurantDeal
   end
 
   def self.all()
+    sql = "SELECT * FROM restaurant_deals"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| RestaurantDeal.new( hash ) }
   end
 
   def self.delete_all

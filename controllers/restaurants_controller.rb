@@ -9,6 +9,7 @@ require_relative( '../models/restaurant_deal.rb')
 
 get '/restaurants' do
   @restaurants = Restaurant.all
+  @deals = Deal.all
   erb ( :"restaurants/index" )
 end
 
@@ -24,6 +25,9 @@ post '/restaurants' do
 end
 
 get '/restaurants/:id' do
+  @restaurant_deals = RestaurantDeal.all
+  @burgers = Burger.all
+  @deals = Deal.all
   @restaurant = Restaurant.find( params[:id] )
   erb(:"restaurants/show")
 end

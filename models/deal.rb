@@ -8,8 +8,8 @@ class Deal
     @id = nil || options['id'].to_i
     @name = options['name']
     @description = options['description']
-    @day_id = options['day_id']
-    @restaurant_id = options['restaurant_id']
+    @day_id = options['day_id'].to_i
+    @restaurant_id = options['restaurant_id'].to_i
   end
 
   def save()
