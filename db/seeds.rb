@@ -99,5 +99,6 @@ restaurant_deal1 = RestaurantDeal.new({
 
 restaurant_deal1.save
 
+
 binding.pry
 nil

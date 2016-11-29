@@ -11,14 +11,6 @@
 
   <p>
     <label>
-      Description:
-      <input type="text" name="description"
-      value="<%= @deal.description %>" />
-    </label>
-  </p>
-
-  <p>
-    <label>
       Restaurant:
       <select name="restaurant_id">
        
@@ -40,6 +32,12 @@
           <% end %>
       </select>
     </label>
+  </p>
+
+  <p>Description(What's included?):</p> 
+    <p><textarea rows="4" cols="50" name="description" value="<%= @deal.description %>"/>
+Give as much relevant info as you can for your fellow burger lovers!!
+    </textarea> 
   </p>
 
   <input type="submit" value="Update"/>
