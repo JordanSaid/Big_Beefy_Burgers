@@ -4,18 +4,15 @@
   <% for restaurant in @restaurants %>
   <li>
   <p><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></p>
-  <p><a href="<%= restaurant.menu %>">Menu</a></p>
   <h3>Deals</h3>
       <% for deal in @deals%>
       <% if (deal.restaurant_id == restaurant.id) %>
-      <p> <%= deal.day.name()%>: <%= deal.name %></p>
+      <p> <%= deal.day.name()%>: <a href="/deals/<%= deal.id %>"><%= deal.name %></p>
       <%end%>
       <%end%>
-      <p>
-        <form action="/restaurants/<%= restaurant.id %>/delete" method="POST">
-          <input type="submit" value="delete" />
-        </form></p>
+      <p><a href="<%= restaurant.menu %>">Menu</a></p>
       <%end%>
+
     </p>
   </li>
   

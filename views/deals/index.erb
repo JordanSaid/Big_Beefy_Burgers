@@ -3,17 +3,11 @@
 <ul>
   <% for deal in @deals %>
   <li>
-  <p><a href="/deals/<%= deal.id %>"><%= deal.name %></a></p>
-  <p><%= deal.name %> </p>
-  <p><%= deal.description %></p>
-  <p><a href="/days/<%= deal.day_id %>"><%= deal.day.name %></a></p>
   <p><a href="/restaurants/<%= deal.restaurant_id%>"><%= deal.restaurant.name %></a></p>
+  <p><a href="/deals/<%= deal.id %>"><%= deal.name %></a></p>
+  <p><%= deal.description %></p>
+  <p><%= deal.day.name %></p>
   
-    <p>
-      <form action="/deals/<%= deal.id %>/delete" method="POST">
-        <input type="submit" value="delete" />
-      </form>
-    </p>
   </li>
   <% end %>
 </ul>

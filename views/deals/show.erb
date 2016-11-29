@@ -5,6 +5,8 @@
 <% for restaurant in @restaurants%>
 <% if (restaurant.id == @deal.restaurant_id) %>
 <p><a href="<%= restaurant.menu %>">Menu</a></p>
+<a href="/deals/<%= @deal.id %>/edit">Edit Deal</a>
+<a href="/deals/<%= @deal.id %>/delete">Delete Deal</a>
 <%end%>
 <%end%>
 

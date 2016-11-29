@@ -1,5 +1,7 @@
 <h1><%= @restaurant.name%></h1>
-<p><a href="<%= @restaurant.menu %>">Menu</a></p>
+<a href="<%= @restaurant.menu %>">Menu</a>
+<a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a>
+<a href="/restaurants/<%= @restaurant.id %>/delete">Delete Restaurant</a>
   <div>
   <% for deal in @deals %>
   <% if (deal.restaurant_id == @restaurant.id) %>
@@ -7,7 +9,6 @@
   </p>
   <p> Description: <%= deal.description()%>
   <p> Day: <%= deal.day.name()%></p>
-  <a href="/restaurants/<%= @restaurant.id %>/edit">Edit</a>
   <hr/>
   <%end%>
   <%end%>

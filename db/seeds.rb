@@ -13,7 +13,6 @@ day5 = Day.find(5)
 day6 = Day.find(6)
 day7 = Day.find(7)
 day8 = Day.find(8)
-day9 = Day.find(9)
 
 restaurant1 = Restaurant.new({
   "name" => "Chanter",
