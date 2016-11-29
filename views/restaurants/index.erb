@@ -1,14 +1,11 @@
 <h1>Restaurants</h1>
 
-<p>
-  <a href="/restaurants/new">Add a restaurant</a>
-</p>
-
 <ul>
   <% for restaurant in @restaurants %>
   <li>
   <p><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></p>
   <p><a href="<%= restaurant.menu %>">Menu</a></p>
+  <h3>Deals</h3>
       <% for deal in @deals%>
       <% if (deal.restaurant_id == restaurant.id) %>
       <p> <%= deal.day.name()%>: <%= deal.name %></p>

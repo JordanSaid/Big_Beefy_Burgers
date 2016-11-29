@@ -1,11 +1,10 @@
-<div>
-<% for restaurant_deal in @restaurant_deals %> 
-<% if (restaurant_deal.burger_id == restaurant_deal.deal_id) && (restaurant_deal.burger.restaurant_id == restaurant_deal.deal.restaurant_id) %>
-<p> Burger: <%= restaurant_deal.burger.name()%> 
-</p>
-<p>
-</p>
-</div>
-<hr/>
+<h1><%= @deal.name%></h1>
+<p>Restaurant: <%= @deal.restaurant.name%></p>
+<p>Day: <%= @deal.day.name%></p>
+<p>Description: <%= @deal.description%></p>
+<% for restaurant in @restaurants%>
+<% if (restaurant.id == @deal.restaurant_id) %>
+<p><a href="<%= restaurant.menu %>">Menu</a></p>
 <%end%>
 <%end%>
+

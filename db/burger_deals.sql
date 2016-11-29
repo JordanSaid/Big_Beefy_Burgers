@@ -41,6 +41,10 @@ INSERT INTO days (id, name) VALUES (3, 'Wednesday');
 INSERT INTO days (id, name) VALUES (4, 'Thursday'); 
 INSERT INTO days (id, name) VALUES (5, 'Friday'); 
 INSERT INTO days (id, name) VALUES (6, 'Saturday'); 
-INSERT INTO days (id, name) VALUES (7, 'Sunday')
+INSERT INTO days (id, name) VALUES (7, 'Sunday');
+INSERT INTO days (id, name)
+  VALUES (8, 'Everyday');
+INSERT INTO days (id, name)
+  VALUES (9, 'Not Weekends')
 
 

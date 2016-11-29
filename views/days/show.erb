@@ -2,9 +2,8 @@
   <div>
   <% for deal in @deals %>
   <% if (deal.day_id == @day.id) %>
-  <p> Restaurant: <%= deal.restaurant.name()%>
-  <p> Deal: <%= deal.name()%>
-  </p>
+  <p><a href="/restaurants/<%= deal.restaurant_id %>"><%= deal.restaurant.name %></a></p>
+  <p><a href="/deals/<%= deal.id %>"><%= deal.name %></a></p>
   <p> Description: <%= deal.description()%></p>
   </div>
   <hr/>

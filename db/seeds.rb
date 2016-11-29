@@ -12,6 +12,8 @@ day4 = Day.find(4)
 day5 = Day.find(5)
 day6 = Day.find(6)
 day7 = Day.find(7)
+day8 = Day.find(8)
+day9 = Day.find(9)
 
 restaurant1 = Restaurant.new({
   "name" => "Chanter",
@@ -26,6 +28,13 @@ restaurant2 = Restaurant.new({
   })
 
 restaurant2.save
+
+restaurant3 = Restaurant.new({
+  "name" => "Candy Bar & Kitchen",
+  "menu" => "http://www.candybaredinburgh.co.uk/tasks/render/file/?fileid=C869A149-1DD8-B71C-70D7F9720356FD4A"
+  })
+
+restaurant3.save
 
 burger1 = Burger.new({
   "name" => "Cheeseburger",
@@ -44,7 +53,7 @@ burger2.save
 deal1 = Deal.new({
   "name" => "Burger and a Drink",
   "description" => "Enjoy either a classic beef burger or southern-fried chicken burger with a drink for only £7.29",
-  "day_id" => day1.id,
+  "day_id" => day8.id,
   "restaurant_id" => restaurant1.id
   })
 
@@ -60,10 +69,11 @@ deal2 = Deal.new({
 deal2.save
 
 deal3 = Deal.new({
-  "name" => "£4 Burgers",
-  "description" => "Save up to 30 percent on all our delicious burgers",
-  "day_id" => day5.id,
-  "restaurant_id" => restaurant1.id
+  "name" => "Burger Wednesdays - Burger, Beer and Ben & Jerries £10",
+  "description" => "BBQ bacon cheese
+burger, Chilli Cheese burger, Mushroom Swiss burger, Black & Blue Burger, Mexican burger",
+  "day_id" => day3.id,
+  "restaurant_id" => restaurant3.id
   })
 
 deal3.save
