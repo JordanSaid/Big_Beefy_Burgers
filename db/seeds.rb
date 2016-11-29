@@ -49,6 +49,20 @@ burger2 = Burger.new({
 
 burger2.save
 
+burger3 = Burger.new({
+  "name" => "Beefburger",
+  "restaurant_id" => restaurant2.id
+  })
+
+burger3.save
+
+burger4 = Burger.new({
+  "name" => "Cheeseburger",
+  "restaurant_id" => restaurant3.id
+  })
+
+burger4.save
+
 deal1 = Deal.new({
   "name" => "Burger and a Drink",
   "description" => "Enjoy either a classic beef burger or southern-fried chicken burger with a drink for only £7.29",

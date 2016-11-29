@@ -11,10 +11,18 @@
   </p>
   <p> Description: <%= deal.description()%>
   <p> Day: <%= deal.day.name()%></p>
-  <hr/>
   <%end%>
   <%end%>
   </div>
+  <div>
+  <h3>Burgers</h3>
+  <% for burger in @burgers %>
+  <% if (burger.restaurant_id == @restaurant.id) %>
+  <%= burger.name()%> |
+  <%end%>
+  <%end%>
+  </div>
+  <hr/>
   
 
 
