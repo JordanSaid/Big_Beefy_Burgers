@@ -7,7 +7,7 @@
   <h3>Deals</h3>
       <% for deal in @deals%>
       <% if (deal.restaurant_id == restaurant.id) %>
-      <p> <%= deal.day.name()%>: <a href="/deals/<%= deal.id %>"><%= deal.name %></p>
+      <p><%= deal.day.name()%>: <a href="/deals/<%= deal.id %>"> <%= deal.name %></a></p>
       <%end%>
       <%end%>
       <p><a href="<%= restaurant.menu %>">Menu</a></p>
