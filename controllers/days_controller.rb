@@ -13,6 +13,7 @@ get '/days' do
 end
 
 get '/days/:id' do
+  @restaurants = Restaurant.all
   @day = Day.find( params[:id] )
   @deals = Deal.all
   erb(:"days/show")
