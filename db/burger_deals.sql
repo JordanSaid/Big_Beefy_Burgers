@@ -48,3 +48,5 @@ INSERT INTO days (id, name)
   VALUES (9, 'Not Weekends')
 
 
+
+

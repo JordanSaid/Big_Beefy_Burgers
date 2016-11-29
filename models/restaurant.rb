@@ -31,9 +31,9 @@ class Restaurant
 
   def self.update( options )
     sql = "UPDATE restaurants SET
-          name='#{options['name']}',
-          menu='#{options['menu']}',
-          WHERE id='#{options['id']}'"
+        name='#{options['name']}',
+        menu='#{options['menu']}'
+        WHERE id=#{options['id']}"
     SqlRunner.run( sql )
   end
 
