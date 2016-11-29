@@ -42,8 +42,8 @@ burger2 = Burger.new({
 burger2.save
 
 deal1 = Deal.new({
-  "name" => "Burger and a pint £7.99",
-  "description" => "Applies to all burgers and selected drinks",
+  "name" => "Burger and a Drink",
+  "description" => "Enjoy either a classic beef burger or southern-fried chicken burger with a drink for only £7.29",
   "day_id" => day1.id,
   "restaurant_id" => restaurant1.id
   })
@@ -51,19 +51,19 @@ deal1 = Deal.new({
 deal1.save
 
 deal2 = Deal.new({
-  "name" => "Cheeseburger and a pint £7.99",
+  "name" => "2 for 1 Burgers",
   "description" => "Applies to all burgers and selected drinks",
-  "day_id" => day1.id,
-  "restaurant_id" => restaurant1.id
+  "day_id" => day3.id,
+  "restaurant_id" => restaurant2.id
   })
 
 deal2.save
 
 deal3 = Deal.new({
-  "name" => "Veggie Burger and a pint £7.99",
-  "description" => "Applies to all burgers and selected drinks",
-  "day_id" => day1.id,
-  "restaurant_id" => restaurant2.id
+  "name" => "£4 Burgers",
+  "description" => "Save up to 30 percent on all our delicious burgers",
+  "day_id" => day5.id,
+  "restaurant_id" => restaurant1.id
   })
 
 deal3.save

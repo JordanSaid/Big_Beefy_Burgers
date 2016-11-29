@@ -16,9 +16,9 @@
       </form>
       <% for deal in @deals%>
       <% if (deal.restaurant_id == restaurant.id) %>
+      <p> <%= deal.day.name()%>: <%= deal.name %></p>
       <%end%>
       <%end%>
-      <p> Deal Day: <%= deal.day.name()%></p>
       <%end%>
     </p>
   </li>
