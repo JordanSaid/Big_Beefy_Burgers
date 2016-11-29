@@ -32,7 +32,17 @@ get '/restaurants/:id' do
   erb(:"restaurants/show")
 end
 
+get '/restaurants/:id/edit' do
+  @restaurant = Restaurant.find( params[:id] )
+  erb(:"restaurants/edit")
+end
+
+post '/restaurants/:id' do
+  restaurant = Restaurant.update( params )
+  redirect to("/restaurants/#{params[:id]}")
+end
+
 post '/restaurants/:id/delete' do
   Restaurant.destroy( params[:id])
-  redirect to("/restaurants") 
+  redirect to("/restaurants/#{params[:id]}") 
 end

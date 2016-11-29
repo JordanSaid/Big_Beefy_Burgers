@@ -29,6 +29,14 @@ class Restaurant
     return results.map { |hash| Restaurant.new( hash ) }
   end
 
+  def self.update( options )
+    sql = "UPDATE restaurants SET
+          name='#{options['name']}',
+          menu='#{options['menu']}',
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
   def self.delete_all
     sql = "DELETE FROM restaurants"
     SqlRunner.run( sql )

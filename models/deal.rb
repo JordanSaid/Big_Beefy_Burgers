@@ -30,6 +30,16 @@ class Deal
     return Deal.new( results.first )
   end
 
+  def self.update( options )
+    sql = "UPDATE deals SET
+          name='#{options['name']}',
+          description='#{options['description']}',
+          restaurant_id='#{options['restaurant_id']}',
+          day_id='#{options['day_id']}'
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
   def day()
       sql = "SELECT * FROM days WHERE id = #{@day_id};"
       day = SqlRunner.run( sql )

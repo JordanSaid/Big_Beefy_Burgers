@@ -1,0 +1,46 @@
+<h1>Edit Deal</h1>
+
+<form action="/deals/<%= @deal.id %>" method="post">
+  <p>
+    <label>
+      Name:
+      <input type="text" name="name" 
+      value="<%= @deal.name %>" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Description:
+      <input type="text" name="description"
+      value="<%= @deal.description %>" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Restaurant:
+      <select name="restaurant_id">
+       
+       <% for restaurant in @restaurants %>
+       <option value="<%= restaurant.id %>"><%= restaurant.name %></option>
+       <% end %>
+
+     </select>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Day:
+      <select name="day_id">
+
+          <% for day in @days %>
+          <option value="<%= day.id %>"><%= day.name %></option>
+          <% end %>
+      </select>
+    </label>
+  </p>
+
+  <input type="submit" value="Update"/>
+</form>

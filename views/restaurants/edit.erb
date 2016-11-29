@@ -1,0 +1,21 @@
+<h1>Edit Restauarnt</h1>
+
+<form action="/restaurants/<%= @restaurant.id %>" method="post">
+  <p>
+    <label>
+      Name:
+      <input type="text" name="name"
+      value="<%= @restaurant.name %>"/>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Menu:
+      <input type="text" name="menu"
+      value="<%= @restaurant.menu %>" />
+    </label>
+  </p>
+
+  <input type="submit" value="Update"/>
+</form>
