@@ -18,21 +18,21 @@ CREATE TABLE restaurants(
 CREATE TABLE burgers(
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
-  restaurant_id INT8 references restaurants(id)
+  restaurant_id INT8 references restaurants(id) ON DELETE CASCADE
 );
 
 CREATE TABLE deals(
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
   description VARCHAR(255) not null,
-  day_id INT8 references days(id),
-  restaurant_id INT8 references restaurants(id)
+  day_id INT8 references days(id) ON DELETE CASCADE,
+  restaurant_id INT8 references restaurants(id) ON DELETE CASCADE
 );
 
 CREATE TABLE restaurant_deals(
   id SERIAL8 primary key,
-  deal_id INT8 references deals(id),
-  burger_id INT8 references burgers(id)
+  deal_id INT8 references deals(id) ON DELETE CASCADE,
+  burger_id INT8 references burgers(id) ON DELETE CASCADE
 );
 
 INSERT INTO days (id, name) VALUES (1, 'Monday');

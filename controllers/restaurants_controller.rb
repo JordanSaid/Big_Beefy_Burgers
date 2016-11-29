@@ -42,7 +42,6 @@ post '/restaurants/:id' do
   redirect to("/restaurants/#{params[:id]}")
 end
 
-post '/restaurants/:id/delete' do
-  Restaurant.destroy( params[:id])
-  redirect to("/restaurants/#{params[:id]}") 
+post '/restaurants/:id/delete' do Restaurant.destroy( params[:id])
+  redirect to("/restaurants") 
 end

@@ -1,7 +1,9 @@
 <h1><%= @restaurant.name%></h1>
 <a href="<%= @restaurant.menu %>">Menu</a>
 <a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a>
-<a href="/restaurants/<%= @restaurant.id %>/delete">Delete Restaurant</a>
+<form action="/restaurants/<%= @restaurant.id %>/delete" method="post">
+  <input type="submit" value="Delete Restaurant" />
+</form>
   <div>
   <% for deal in @deals %>
   <% if (deal.restaurant_id == @restaurant.id) %>
@@ -13,5 +15,6 @@
   <%end%>
   <%end%>
   </div>
+  
 
 
