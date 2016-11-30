@@ -12,6 +12,9 @@
 .main {
     margin-left:140px;
     margin-right:380px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
  }
 
 nav li {

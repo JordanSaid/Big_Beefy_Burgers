@@ -11,13 +11,45 @@ background-size: cover;
 }
 
 h1 {
-color: #ed7777;
+color: #5f7ac8;
+font-size: 2em;
+text-align: center;
+margin-top: -20px;
 }
 
 a {
 color: #6fe7db;
 }
 
+ul {
+list-style-type: none;
+}
+
 nav li a {
 color: #ed7777;  
+}
+
+h2 a{
+  color:#ed7777;
+}
+
+h2 a:link {
+    text-decoration: none;
+}
+
+h2 a:visited {
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+h2 a:active {
+    text-decoration: underline;
+}
+
+h3 {
+color: #f4f4f0;
+font-size: 1.5em;
 }

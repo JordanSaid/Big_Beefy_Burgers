@@ -1,15 +1,16 @@
-<h1><%= @deal.name%></h1>
-<p>Restaurant: <%= @deal.restaurant.name%></p>
-<p>Day: <%= @deal.day.name%></p>
-<p>Description: <%= @deal.description%></p>
 <% for restaurant in @restaurants%>
 <% if (restaurant.id == @deal.restaurant_id) %>
-<p><a href="<%= restaurant.website %>">Website</a></p>
-<p><a href="<%= restaurant.menu %>">Menu</a></p>
+<h1><%= @deal.name%></h1>
+<h2><a href="/restaurants/<%= @deal.restaurant_id%>"><%= @deal.restaurant.name %></a></h2>
+<p><a href="<%= restaurant.website %>">Website</a>
+<a href="<%= restaurant.menu %>">Menu</a></p>
+<p>Day: <%= @deal.day.name%></p>
+<p>Description: <%= @deal.description%></p>
 <a href="/deals/<%= @deal.id %>/edit">Edit Deal</a>
 <form action="/deals/<%= @deal.id %>/delete" method="post">
   <input type="submit" value="Delete Deal" />
 </form>
 <%end%>
 <%end%>
+<hr>
 
