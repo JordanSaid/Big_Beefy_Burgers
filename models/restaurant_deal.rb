@@ -17,16 +17,16 @@ class RestaurantDeal
     @id = results.first()['id'].to_i
   end
 
-  def deal
+  def deals
     sql = "SELECT * FROM deals d INNER JOIN restaurant_deals rd ON rd.deal_id = d.id WHERE d.id = #{@deal_id}"
     results = SqlRunner.run( sql )
-    return Deal.new( results.first )
+    return results.map { |hash| Deal.new( hash ) }
   end
 
-  def burger
+  def burgers
     sql = "SELECT * FROM burgers b INNER JOIN restaurant_deals rd ON rd.burger_id = b.id WHERE b.id = #{@burger_id}"
     results = SqlRunner.run( sql )
-    return Deal.new( results.first )
+    return results.map { |hash| Burger.new( hash ) }
   end
 
   def self.all()

@@ -99,6 +99,13 @@ restaurant_deal1 = RestaurantDeal.new({
 
 restaurant_deal1.save
 
+restaurant_deal2 = RestaurantDeal.new({
+  "burger_id" => burger2.id,
+  "deal_id" => deal1.id
+  })
+
+restaurant_deal2.save
+
 
 binding.pry
 nil
