@@ -1,8 +1,9 @@
+<div>
 <h1><%= @restaurant.name%></h1>
-<a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a>
-<form action="/restaurants/<%= @restaurant.id %>/delete" method="post">
-  <input type="submit" value="Delete Restaurant" />
+<p align="center"><a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></p>
+<form align="center" action="/restaurants/<%= @restaurant.id %>/delete" method="post"><input type="submit" value="Delete Restaurant" />
 </form>
+</div>
 <a href="<%= @restaurant.website %>">Website</a>
 <a href="<%= @restaurant.menu %>">Menu</a>
   <div>
