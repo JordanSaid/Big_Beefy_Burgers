@@ -21,7 +21,7 @@ get '/deals/new' do
 end
 
 get '/deals/:id' do
-  @deals = Deal.all
+  @days = Day.all
   @restaurants = Restaurant.all()
   @deal = Deal.find( params[:id] )
   erb(:"deals/show")

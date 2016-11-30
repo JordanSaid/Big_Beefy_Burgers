@@ -13,6 +13,7 @@ get '/days' do
 end
 
 get '/days/:id' do
+  @days = Day.all
   @restaurants = Restaurant.all
   @day = Day.find( params[:id] )
   @deals = Deal.all

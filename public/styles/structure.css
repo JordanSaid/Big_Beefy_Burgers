@@ -1,0 +1,45 @@
+.top {
+    height: 92px;
+}
+
+.sidebar {
+  margin-top:-50px;
+    width: 140px;
+    float:left;
+    position:fixed;
+}
+
+.main {
+    margin-left:140px;
+    margin-right:380px;
+ }
+
+nav li {
+    display: inline;
+    text-decoration: none;
+    font-size: 2em;
+    margin-left:90px;
+    margin-right:380px;
+    text-align: center;
+ }
+
+ nav a {
+   line-height: 60px;
+   padding:10px;
+ }
+
+ nav a:link {
+     text-decoration: none;
+ }
+
+ nav a:visited {
+     text-decoration: none;
+ }
+
+ nav a:hover {
+     text-decoration: underline;
+ }
+
+ nav a:active {
+     text-decoration: underline;
+ }

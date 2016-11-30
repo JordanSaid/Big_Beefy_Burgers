@@ -16,6 +16,7 @@ day8 = Day.find(8)
 
 restaurant1 = Restaurant.new({
   "name" => "Chanter",
+  "website" => "http://www.thechanterpub.co.uk/",
   "menu" => "http://www.thechanterpub.co.uk/resource/binary//c3434f43c94a8d3324871645bd2e65a0/PP60970G7-PHOTO-GTP1-SCOTTISH-G7.pdf"
   })
 
@@ -23,6 +24,7 @@ restaurant1.save
 
 restaurant2 = Restaurant.new({
   "name" => "Burger Meats Bun",
+  "website" => "http://www.burger-meats-bun.co.uk/",
   "menu" => "https://static1.squarespace.com/static/5540c310e4b089664a9b9d33/t/557ef72ae4b0db2f0d136b7d/1434384170070/BMB-Main-Menu.pdf"
   })
 
@@ -30,6 +32,7 @@ restaurant2.save
 
 restaurant3 = Restaurant.new({
   "name" => "Candy Bar & Kitchen",
+  "website" => "http://www.candybaredinburgh.co.uk/",
   "menu" => "http://www.candybaredinburgh.co.uk/tasks/render/file/?fileid=C869A149-1DD8-B71C-70D7F9720356FD4A"
   })
 
@@ -83,8 +86,7 @@ deal2.save
 
 deal3 = Deal.new({
   "name" => "Burger Wednesdays - Burger, Beer and Ben & Jerries £10",
-  "description" => "BBQ bacon cheese
-burger, Chilli Cheese burger, Mushroom Swiss burger, Black & Blue Burger, Mexican burger",
+  "description" => "BBQ bacon cheese burger, Chilli Cheese burger, Mushroom Swiss burger, Black & Blue Burger, Mexican burger",
   "day_id" => day3.id,
   "restaurant_id" => restaurant3.id
   })

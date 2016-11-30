@@ -12,7 +12,8 @@ CREATE TABLE days(
 CREATE TABLE restaurants(
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
-  menu VARCHAR(255) not null
+  menu VARCHAR(255) not null,
+  website VARCHAR(255) not null
 );
 
 CREATE TABLE burgers(

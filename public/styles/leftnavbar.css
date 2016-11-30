@@ -1,0 +1,29 @@
+@font-face {
+    font-family: ChalkBoard;
+    src: url(a_song_for_jennifer_bold.tff);
+}
+
+td a {
+  color: #f4f4f0;
+  font-size: 1.6em;
+}
+
+tr a {
+  line-height: 60px;
+}
+
+td a:link {
+    text-decoration: none;
+}
+
+td a:visited {
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td a:active {
+    text-decoration: underline;
+}
