@@ -8,12 +8,14 @@ require_relative( '../models/deal.rb' )
 require_relative( '../models/restaurant_deal.rb')
 
 get '/restaurants' do
+  @days = Day.all
   @restaurants = Restaurant.all
   @deals = Deal.all
   erb ( :"restaurants/index" )
 end
 
 get '/restaurants/new' do
+  @days = Day.all
   @restaurants = Restaurant.all
   erb(:"restaurants/new")
 end
@@ -26,12 +28,15 @@ end
 
 get '/restaurants/:id' do
   @restaurant_deals = RestaurantDeal.all
+  @days = Day.all
   @deals = Deal.all
   @restaurant = Restaurant.find( params[:id] )
   erb(:"restaurants/show")
 end
 
 get '/restaurants/:id/edit' do
+  @deals = Deal.all
+  @days = Day.all
   @restaurant = Restaurant.find( params[:id] )
   erb(:"restaurants/edit")
 end

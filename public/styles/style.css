@@ -1,0 +1,64 @@
+@font-face {
+    font-family: ChalkBoard;
+    src: url(a_song_for_jennifer_bold.tff);
+}
+
+
+body {
+font-family: ChalkBoard;
+color: #f4f4f0;
+background: url('/images/background3.jpg');
+background-size: cover;
+}
+
+h1 {
+color: #ed7777;
+}
+
+a {
+color: #6fe7db;
+}
+
+td a {
+  color: #f4f4f0;
+  font-size: 2em;
+}
+
+tr a {
+  line-height: 60px;
+}
+
+td a:link {
+    text-decoration: none;
+}
+
+td a:visited {
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td a:active {
+    text-decoration: underline;
+}
+
+li {
+  font-size: 20px;
+  color: #ed7777;
+}
+
+.top {
+    height: 92px;
+}
+
+.left {
+    width: 150px;
+    float:left;
+}
+
+.main {
+  margin-left:178px;
+  margin-right:380px;
+ }
