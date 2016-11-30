@@ -1,11 +1,9 @@
-<div>
 <h1><%= @restaurant.name%></h1>
+<p align ="center"><a href="<%= @restaurant.website %>">Website</a></p>
+<p align ="center"><a href="<%= @restaurant.menu %>">Menu</a></p>
 <p align="center"><a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></p>
 <form align="center" action="/restaurants/<%= @restaurant.id %>/delete" method="post"><input type="submit" value="Delete Restaurant" />
 </form>
-</div>
-<a href="<%= @restaurant.website %>">Website</a>
-<a href="<%= @restaurant.menu %>">Menu</a>
   <div>
   <h3>Deals</h3>
   <% for deal in @deals %>
