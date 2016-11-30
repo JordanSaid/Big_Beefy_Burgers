@@ -7,11 +7,6 @@ require_relative( '../models/burger.rb' )
 require_relative( '../models/restaurant_deal.rb' )
 require('pry-byebug') 
 
-get '/days' do
-  @days = Day.all()
-  erb ( :"days/index" )
-end
-
 get '/days/:id' do
   @days = Day.all
   @restaurants = Restaurant.all
