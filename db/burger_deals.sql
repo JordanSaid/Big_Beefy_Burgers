@@ -25,7 +25,7 @@ CREATE TABLE burgers(
 CREATE TABLE deals(
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
-  description VARCHAR(255) not null,
+  description VARCHAR(510) not null,
   day_id INT8 references days(id) ON DELETE CASCADE,
   restaurant_id INT8 references restaurants(id) ON DELETE CASCADE
 );

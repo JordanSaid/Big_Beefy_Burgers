@@ -60,7 +60,7 @@ restaurant6 = Restaurant.new({
   "menu" => "http://citycafeedinburgh.co.uk/main-menu/"
   })
 
-restaurant5.save
+restaurant6.save
 
 burger1 = Burger.new({
   "name" => "Cheeseburger",
@@ -148,7 +148,7 @@ deal6 = Deal.new({
   "restaurant_id" => restaurant6.id
   })
 
-deal5.save
+deal6.save
 
 restaurant_deal1 = RestaurantDeal.new({
   "burger_id" => burger1.id,
