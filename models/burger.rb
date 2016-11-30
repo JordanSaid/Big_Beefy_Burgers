@@ -44,9 +44,4 @@ class Burger
     SqlRunner.run( sql )
   end
 
-  def self.destroy_by_restaurant(restaurant_id)
-    sql = "DELETE FROM burgers where restaurant_id = #{restaurant_id}"
-    SqlRunner.run( sql )
-  end
-
 end
