@@ -2,7 +2,7 @@ require_relative( '../models/day.rb' )
 require_relative( '../models/deal.rb' )
 require_relative( '../models/burger.rb' )
 require_relative( '../models/restaurant.rb' )
-require_relative( '../models/restaurant_deal.rb' )
+require_relative( '../models/restaurant_deal.rb')
 require('pry-byebug')
 
 day1 = Day.find(1)
