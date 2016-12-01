@@ -1,4 +1,8 @@
 <h1> Edinburgh Burger Deals </h1>
 <h2 align="center"> Welcome to Edinburgh Burger Deals where we gather information on all the tastiest burger offers Edinburgh has to offer!</h2>
-<h4 align="center"><a href="/deals/6">For Example: The City Cafe's Ultimate Burger</a></h4>
+<%for deal in @deals%>
+<%if (deal.restaurant.name == "The City Cafe")%>
+<h4 align="center"><a href="/deals/<%=deal.restaurant_id%>">For Example: The City Cafe's Ultimate Burger</a></h4>
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/1_aa9tcB1YQ" frameborder="0" allowfullscreen></iframe></p>
+<%end%>
+<%end%>
