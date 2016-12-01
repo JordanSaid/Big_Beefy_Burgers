@@ -165,5 +165,5 @@ restaurant_deal2 = RestaurantDeal.new({
 restaurant_deal2.save
 
 
-# binding.pry
-# nil
+binding.pry
+nil
